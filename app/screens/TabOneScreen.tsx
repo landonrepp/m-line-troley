@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
 import { Text, View } from '../components/Themed';
-import TrolleyMap from '../components/TrolleyMap';
+import TrolleyMap from '../components/TrolleyMap/TrolleyMap';
 
 export default function TabOneScreen() {
   return (
