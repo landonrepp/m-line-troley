@@ -9,10 +9,15 @@ export type UserCircleProps = {
 }
 
 export function UserCircle({ latDelta } : UserCircleProps){
-    const [userCircleRadius, setUserCircleRadius] = useState(100);
+    const userCircleScale = 1200;
+    const [userCircleRadius, setUserCircleRadius] = useState(latDelta * userCircleScale);
     const window = Dimensions.get('window');
     const { width, height }  = window;
     const [userLocation, setUserLocation] = useState<Location.LocationObject|null>(null);
+
+    useEffect(()=>{
+      setUserCircleRadius(latDelta * userCircleScale);
+    }, [latDelta]);
 
     useEffect(() => {
         (async () => {
@@ -21,9 +26,14 @@ export function UserCircle({ latDelta } : UserCircleProps){
             console.log('Permission to access location was denied');
             return;
           }
+
           let location = await Location.getCurrentPositionAsync({});
           setUserLocation(location);
-          console.log(`user location set ${JSON.stringify(location.coords)}`);
+
+          setInterval(async ()=>{
+            let location = await Location.getCurrentPositionAsync({});
+            setUserLocation(location);
+          }, 2000);
         })();
       }, []);
 
