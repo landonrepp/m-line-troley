@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as Location from 'expo-location';
 import { Circle, Region } from "react-native-maps";
 import { Dimensions } from "react-native";
+import { LocationAccuracy } from "expo-location";
 
 
 export type UserCircleProps = {
@@ -26,14 +27,12 @@ export function UserCircle({ latDelta } : UserCircleProps){
             console.log('Permission to access location was denied');
             return;
           }
+          
+          const stopWatchingLocation = Location.watchPositionAsync({accuracy: LocationAccuracy.BestForNavigation},(result)=>{
+            setUserLocation(result);
+          });
 
-          let location = await Location.getCurrentPositionAsync({});
-          setUserLocation(location);
-
-          setInterval(async ()=>{
-            let location = await Location.getCurrentPositionAsync({});
-            setUserLocation(location);
-          }, 2000);
+          return stopWatchingLocation;
         })();
       }, []);
 
