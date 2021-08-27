@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import * as Location from 'expo-location';
 import { Circle, Region } from "react-native-maps";
 import { Dimensions } from "react-native";
+import { UserLocation, WatchUserLocation } from "services";
+
 
 
 export type UserCircleProps = {
@@ -13,40 +14,32 @@ export function UserCircle({ latDelta } : UserCircleProps){
     const [userCircleRadius, setUserCircleRadius] = useState(latDelta * userCircleScale);
     const window = Dimensions.get('window');
     const { width, height }  = window;
-    const [userLocation, setUserLocation] = useState<Location.LocationObject|null>(null);
+    const [userLocation, setUserLocation] = useState<UserLocation|null>(null);
 
     useEffect(()=>{
       setUserCircleRadius(latDelta * userCircleScale);
     }, [latDelta]);
 
     useEffect(() => {
-        (async () => {
-          let { status } = await Location.requestForegroundPermissionsAsync();
-          if (status !== 'granted') {
-            console.log('Permission to access location was denied');
-            return;
-          }
+      const removeUserLocationListener = WatchUserLocation((currentCoords: UserLocation)=>{
+        setUserLocation(currentCoords);
+      });
+      return ()=>{
+        removeUserLocationListener
+          .then(result=>result());
+      }
+    }, []);
 
-          let location = await Location.getCurrentPositionAsync({});
-          setUserLocation(location);
-
-          setInterval(async ()=>{
-            let location = await Location.getCurrentPositionAsync({});
-            setUserLocation(location);
-          }, 2000);
-        })();
-      }, []);
-
-      return (
-        userLocation == null?
-            null:
-            <Circle 
-                radius={userCircleRadius}
-                fillColor={'lightblue'}
-                center={{
-                    latitude:userLocation.coords.latitude,
-                    longitude: userLocation.coords.longitude
-                }}
-            />
-      );
+    return (
+      userLocation == null?
+          null:
+          <Circle 
+              radius={userCircleRadius}
+              fillColor={'lightblue'}
+              center={{
+                  latitude:userLocation.latitude,
+                  longitude: userLocation.longitude
+              }}
+          />
+    );
 }
