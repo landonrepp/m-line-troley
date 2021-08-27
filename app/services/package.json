@@ -1,0 +1,5 @@
+{
+    "name": "services",
+    "description": "services to support react components",
+    "main": "index"
+}
