@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Dimensions, View, Text } from "react-native";
-import MapView, { Circle, Marker, Region } from "react-native-maps";
+import MapView, { Circle, Marker, PROVIDER_GOOGLE, Region } from "react-native-maps";
 import { TrolleyPath } from "./TrolleyPath";
 import { UserCircle } from "./UserCircle";
 
@@ -63,6 +63,7 @@ export default function TrolleyMap(){
             style={styles.map}
             customMapStyle={mapStyles}
             onRegionChange={onRegionChange}
+            provider={PROVIDER_GOOGLE}
             initialRegion={{
                 latitude:32.7834,
                 longitude: -96.7984,

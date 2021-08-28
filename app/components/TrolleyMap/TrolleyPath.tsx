@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageURISource } from 'react-native';
-import { Marker, LatLng } from 'react-native-maps';
-import { MLineStops } from 'services';
+import { Marker, LatLng, Polyline } from 'react-native-maps';
+import { MLineStops, MLineTurnPoints } from 'services';
 import { UserCircle } from './UserCircle'
 
 export function TrolleyPath() {
@@ -12,14 +12,16 @@ export function TrolleyPath() {
             {MLineStops.map((stop, idx)=>
                 <Marker key={idx} 
                     coordinate={{
-                        latitude: stop.lat, longitude: stop.long
+                        latitude: stop.latitude, longitude: stop.longitude
                     }}
-                    description={stop.name}
                     image={mLineMarker}
                     anchor={{x:.5, y:.5}}
                     >
                 </Marker>
             )}
+            <Polyline 
+                coordinates={MLineTurnPoints.map(x=>({latitude: x.latitude, longitude: x.longitude}))}
+                lineDashPattern={[0]} />
         </>
     );
 }

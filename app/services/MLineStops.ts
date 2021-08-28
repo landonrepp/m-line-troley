@@ -1,178 +1,189 @@
+import { LatitudeAndLongitude } from "./LatitudeAndLongitude"
 
-export const MLineStops = [
+// a list of stops where the MLine picks up and drops off passengers. used to display stops on the tracker
+export const MLineStops: LatitudeAndLongitude[] = [
     {
-        lat: 32.80556,
-        long: -96.79387,
-        name: 'CityPlace/Uptown Station'
+        latitude: 32.807081,
+        longitude:-96.795907,
+    },
+    // { i need to ask why this stop is commented out in the reference code
+    //     lat: 32.805985,
+    //     long:-96.794786,
+    // },
+    {
+        latitude: 32.805563,
+        longitude:-96.794098,
     },
     {
-        lat: 32.80719,
-        long: -96.79602,
-        name: 'Cityplace West at Noble - S - NS'
+        latitude: 32.807625,
+        longitude:-96.79652,
     },
     {
-        lat: 32.80782,
-        long: -96.79669,
-        name: 'City Place West at McKinney - S - FS'
+        latitude: 32.808372,
+        longitude:-96.798183,
     },
     {
-        lat: 32.80865,
-        long: -96.79590,
-        name: 'McKinney at Blackburn - N - NS'
+        latitude: 32.807318,
+        longitude:-96.799503,
     },
     {
-        lat: 32.80928,
-        long: -96.79617,
-        name: 'Blackburn at Cole - W - MB'
+        latitude: 32.806827,
+        longitude:-96.799558,
     },
     {
-        lat: 32.80841,
-        long: -96.79832,
-        name: 'Cole at Lemmon - S - MB'
+        latitude: 32.809314,
+        longitude:-96.796641,
     },
     {
-        lat: 32.80513,
-        long: -96.80030,
-        name: 'Cole at Hall - S - NS'
+        latitude: 32.808573,
+        longitude:-96.795981,
     },
     {
-        lat: 32.80359,
-        long: -96.80132,
-        name: 'Cole at Bowen - S - NS'
+        latitude: 32.805214,
+        longitude:-96.800322,
     },
     {
-        lat: 32.80188,
-        long: -96.80239,
-        name: 'Cole at Allen - S - NS'
+        latitude: 32.803658,
+        longitude:-96.801347,
     },
     {
-        lat: 32.79887,
-        long: -96.80113,
-        name: 'Mckinney at Worthington - S - NS'
+        latitude: 32.802114,
+        longitude:-96.802347,
     },
     {
-        lat: 32.79781,
-        long: -96.80141,
-        name: 'Mckinney at Boll - S - NS'
+        latitude: 32.798572,
+        longitude:-96.801253,
     },
     {
-        lat: 32.79660,
-        long: -96.80172,
-        name: 'Mckinney at Routh - S - NS'
+        latitude: 32.798294,
+        longitude:-96.801143,
     },
     {
-        lat: 32.79532,
-        long: -96.80216,
-        name: 'Mckinney at Fairmount - S - NS'
+        latitude: 32.797759,
+        longitude:-96.801438,
     },
     {
-        lat: 32.7942,
-        long: -96.80251,
-        name: 'Mckinney at Maple - S - NS'
+        latitude: 32.797526,
+        longitude:-96.801336,
     },
     {
-        lat: 32.79314,
-        long: -96.80288,
-        name: 'Mckinney at Pearl - S - NS'
+        latitude: 32.796592,
+        longitude:-96.801775,
     },
     {
-        lat: 32.7918,
-        long: -96.80330,
-        name: 'Mckinney at Olive - S - NS'
+        latitude: 32.79608,
+        longitude:-96.801732,
     },
     {
-        lat: 32.79090,
-        long: -96.80362,
-        name: 'Mckinney at Harwood - S - NS'
+        latitude: 32.79531,
+        longitude:-96.80215700000001,
     },
     {
-        lat: 32.78876,
-        long: -96.80348,
-        name: 'St Paul at Woodall Rodgers - S - NS'
+        latitude: 32.794988,
+        longitude:-96.80208,
     },
     {
-        lat: 32.78781,
-        long: -96.80232,
-        name: 'St Paul at Woodall Rodgers - S - FS'
+        latitude: 32.793783,
+        longitude:-96.802496,
     },
     {
-        lat: 32.78622,
-        long: -96.80043,
-        name: 'Ross & St Paul'
+        latitude: 32.79265,
+        longitude:-96.802902,
     },
     {
-        lat: 32.78444,
-        long: -96.79837,
-        name: 'St Paul at Federal - S - NS'
+        latitude: 32.791818,
+        longitude:-96.803331,
     },
     {
-        lat: 32.78575,
-        long: -96.79627,
-        name: 'Federal at Olive - E - NS'
+        latitude: 32.790949,
+        longitude:-96.803616,
     },
     {
-        lat: 32.78793,
-        long: -96.79855,
-        name: 'Olive at Ross - N - FS'
+        latitude: 32.788714,
+        longitude:-96.803342,
     },
     {
-        lat: 32.78872,
-        long: -96.79999,
-        name: 'Olive at Flora - N - FS'
+        latitude: 32.787816,
+        longitude:-96.802329,
+    },
+    // { I need to ask why this stop is commented out in the reference code
+    //     lat: 32.787233,
+    //     long:-96.801625,
+    // },
+    {
+        latitude: 32.786228,
+        longitude:-96.800439,
     },
     {
-        lat: 32.78923,
-        long: -96.80066,
-        name: 'Olive at Woodall Rodgers - N - MB'
+        latitude: 32.784585,
+        longitude:-96.79854,
     },
     {
-        lat: 32.79122,
-        long: -96.80284,
-        name: 'Olive at Colby - N - FS'
+        latitude: 32.784873,
+        longitude:-96.797209,
     },
     {
-        lat: 32.79265,
-        long: -96.80284,
-        name: 'Mckinney at Pearl N NS'
+        latitude: 32.785722,
+        longitude:-96.796267,
     },
     {
-        lat: 32.79345,
-        long: -96.80259,
-        name: 'Mckinney at Maple-Routh - N - NS'
+        latitude: 32.786688,
+        longitude:-96.797253,
     },
     {
-        lat: 32.79615,
-        long: -96.80178,
-        name: 'Mckinney at Routh - N - NS'
+        latitude: 32.787539,
+        longitude:-96.798288,
     },
     {
-        lat: 32.79827,
-        long: -96.80117,
-        name: 'Mckinney at Worthington - N - NS'
+        latitude: 32.788152,
+        longitude:-96.799342,
     },
     {
-        lat: 32.80181,
-        long: -96.80096,
-        name: 'Mckinney at Sneed - N - NS'
+        latitude: 32.788978,
+        longitude:-96.800558,
     },
     {
-        lat: 32.80255,
-        long: -96.80050,
-        name: 'Mckinney at Bowen - N - MB'
+        latitude: 32.789661,
+        longitude:-96.80138,
     },
     {
-        lat: 32.80409,
-        long: -96.79950,
-        name: 'Mckinney at Hall - N - NS'
+        latitude: 32.790867,
+        longitude:-96.802679,
     },
     {
-        lat: 32.80571,
-        long: -96.79842,
-        name: 'Mckinney at Lemmon - N - NS'
+        latitude: 32.793216,
+        longitude:-96.802848,
     },
     {
-        lat: 32.80719,
-        long: -96.79602,
-        name: 'Cityplace West at Noble - S - NS'
+        latitude: 32.794203,
+        longitude:-96.802517,
+    },
+    {
+        latitude: 32.799602,
+        longitude:-96.801013,
+    },
+    {
+        latitude: 32.799533,
+        longitude:-96.800831,
+    },
+    {
+        latitude: 32.801867,
+        longitude:-96.800884,
+    },
+    {
+        latitude: 32.802856,
+        longitude:-96.800232,
+    },
+    {
+        latitude: 32.803633,
+        longitude:-96.799703,
+    },
+    {
+        latitude: 32.805589,
+        longitude:-96.798486,
+    },
+    {
+        latitude: 32.80668,
+        longitude:-96.797764,
     }
-];
+]
