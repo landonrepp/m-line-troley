@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Dimensions, View, Text } from "react-native";
 import MapView, { Circle, Marker, Region } from "react-native-maps";
+import { TrolleyPath } from "./TrolleyPath";
 import { UserCircle } from "./UserCircle";
 
 
@@ -12,10 +13,55 @@ export default function TrolleyMap(){
     const onRegionChange = (region: Region)=>{
         setCurrentLatDelta(region.latitudeDelta);
     }
+    const mapStyles = [
+        {
+          "featureType": "administrative",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        }
+      ]
 
     return (
         <MapView 
             style={styles.map}
+            customMapStyle={mapStyles}
             onRegionChange={onRegionChange}
             initialRegion={{
                 latitude:32.7834,
@@ -24,6 +70,7 @@ export default function TrolleyMap(){
                 longitudeDelta:initialLongDelta
             }} >
             <UserCircle latDelta={currentLatDelta}  />
+            <TrolleyPath />
         </MapView>
     );
 }
