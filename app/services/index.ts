@@ -1,6 +1,7 @@
 import { LatitudeAndLongitude } from "./LatitudeAndLongitude";
 import { MLineStops } from "./MLineStops";
 import { MLineTurnPoints } from "./MLineTurnPoints";
+import { GetTrolleyStatus, TrolleyCarStatus, TrolleyStatus } from "./TrolleyStatusService";
 import { WatchUserLocation, UserLocation } from "./UserLocationService";
 
 export {
@@ -8,5 +9,8 @@ export {
     UserLocation,
     MLineStops,
     MLineTurnPoints,
-    LatitudeAndLongitude
+    LatitudeAndLongitude,
+    GetTrolleyStatus,
+    TrolleyStatus,
+    TrolleyCarStatus
 }
