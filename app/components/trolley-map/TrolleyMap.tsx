@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Dimensions, View, Text } from "react-native";
-import MapView, { Circle, Marker, PROVIDER_GOOGLE, Region } from "react-native-maps";
+import * as React from "react";
+import { useState } from "react";
+import { Dimensions } from "react-native";
+import MapView, { PROVIDER_GOOGLE, Region } from "react-native-maps";
+import { TrolleyCars } from "./TrolleyCars";
 import { TrolleyPath } from "./TrolleyPath";
 import { UserCircle } from "./UserCircle";
 
@@ -59,20 +61,21 @@ export default function TrolleyMap(){
       ]
 
     return (
-        <MapView 
-            style={styles.map}
-            customMapStyle={mapStyles}
-            onRegionChange={onRegionChange}
-            provider={PROVIDER_GOOGLE}
-            initialRegion={{
-                latitude:32.7834,
-                longitude: -96.7984,
-                latitudeDelta:initialLatDelta,
-                longitudeDelta:initialLongDelta
-            }} >
-            <UserCircle latDelta={currentLatDelta}  />
-            <TrolleyPath />
-        </MapView>
+      <MapView 
+      style={styles.map}
+      customMapStyle={mapStyles}
+      onRegionChange={onRegionChange}
+      provider={PROVIDER_GOOGLE}
+      initialRegion={{
+          latitude:32.7834,
+          longitude: -96.7984,
+          latitudeDelta:initialLatDelta,
+          longitudeDelta:initialLongDelta
+        }} >
+        <UserCircle latDelta={currentLatDelta}  />
+        <TrolleyPath />
+        <TrolleyCars />
+      </MapView>
     );
 }
 
