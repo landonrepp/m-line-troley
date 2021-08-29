@@ -1,3 +1,4 @@
+import { Configuration, ConfigValues } from "./Configurations";
 import { LatitudeAndLongitude } from "./LatitudeAndLongitude";
 import { MLineStops } from "./MLineStops";
 import { MLineTurnPoints } from "./MLineTurnPoints";
@@ -12,5 +13,7 @@ export {
     LatitudeAndLongitude,
     GetTrolleyStatus,
     TrolleyStatus,
-    TrolleyCarStatus
+    TrolleyCarStatus,
+    ConfigValues,
+    Configuration
 }
