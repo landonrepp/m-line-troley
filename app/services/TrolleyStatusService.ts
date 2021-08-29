@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { ImageURISource } from 'react-native';
 import { LatitudeAndLongitude } from './LatitudeAndLongitude';
+import { ConfigValues } from 'services';
 
 export type TrolleyCarStatus = {
     coords: LatitudeAndLongitude,
@@ -28,7 +29,7 @@ const getImageSource = (carNumber:number):ImageURISource =>{
 }
 
 export function GetTrolleyStatus(){
-    return axios.get<any>('https://track.mata.org:7170/allCars')
+    return axios.get<any>(`${ConfigValues.mataTrackerBaseUrl}/allCars`)
         .then((result) => {
             if(result.status != 200){
                 return null;
