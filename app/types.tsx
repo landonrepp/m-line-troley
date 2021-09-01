@@ -20,3 +20,8 @@ export type TabOneParamList = {
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
+
+export type DrawerParamList = {
+  Tracker: undefined;
+  Events: undefined;
+};
