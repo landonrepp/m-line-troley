@@ -2,8 +2,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
 import { DrawerParamList, TabOneParamList, TabTwoParamList } from '../types';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import TrolleyMapScreen from '../screens/TrolleyMapScreen';
+import EventScreen from '../screens/EventScreen';
 import MenuIcon from '../components/MenuIcon';
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
@@ -30,7 +30,7 @@ function TrackerPage() {
     <TrackerStack.Navigator screenOptions={{headerShown: false }}>
       <TrackerStack.Screen
         name="Tracker"
-        component={TabOneScreen}
+        component={TrolleyMapScreen}
       />
     </TrackerStack.Navigator>
   );
@@ -43,7 +43,7 @@ function EventsPage() {
     <EventsStack.Navigator screenOptions={{headerShown: false}}>
       <EventsStack.Screen
         name="Events"
-        component={TabTwoScreen}
+        component={EventScreen}
       />
     </EventsStack.Navigator>
   );
