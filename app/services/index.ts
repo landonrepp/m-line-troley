@@ -1,19 +1,6 @@
-import { Configuration, ConfigValues } from "./Configurations";
-import { LatitudeAndLongitude } from "./LatitudeAndLongitude";
-import { MLineStops } from "./MLineStops";
-import { MLineTurnPoints } from "./MLineTurnPoints";
-import { GetTrolleyStatus, TrolleyCarStatus, TrolleyStatus } from "./TrolleyStatusService";
-import { WatchUserLocation, UserLocation } from "./UserLocationService";
-
-export {
-    WatchUserLocation,
-    UserLocation,
-    MLineStops,
-    MLineTurnPoints,
-    LatitudeAndLongitude,
-    GetTrolleyStatus,
-    TrolleyStatus,
-    TrolleyCarStatus,
-    ConfigValues,
-    Configuration
-}
+export { Configuration, ConfigValues } from "./Configurations";
+export { LatitudeAndLongitude } from "./LatitudeAndLongitude";
+export { MLineStops } from "./MLineStops";
+export { MLineTurnPoints } from "./MLineTurnPoints";
+export { GetTrolleyStatus, TrolleyCarStatus, TrolleyStatus } from "./TrolleyStatusService";
+export { WatchUserLocation, UserLocation } from "./UserLocationService";
