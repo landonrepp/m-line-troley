@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import { ImageURISource, View, Image } from "react-native";
 import { LatLng, Marker } from "react-native-maps";
-import { GetTrolleyStatus, TrolleyStatus } from "../../services/TrolleyStatusService";
+import { GetTrolleyStatus, TrolleyStatus } from "../../services/index";
 
 export function TrolleyCars(){
     const [trolleyStatus, setTrolleyStatus] = useState<TrolleyStatus|null>(null);
