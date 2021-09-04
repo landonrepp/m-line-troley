@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { ImageURISource } from 'react-native';
 import { LatitudeAndLongitude } from './LatitudeAndLongitude';
-import { ConfigValues } from 'services';
+import { ConfigValues } from '../services/Configurations';
 
 export type TrolleyCarStatus = {
     coords: LatitudeAndLongitude,
