@@ -1,2 +1,2 @@
 # m-line-troley
-UI to track the M-Line trolley in React Native
+UI to track the M-Line trolley. Written in React Native
