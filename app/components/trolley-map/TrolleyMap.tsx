@@ -8,7 +8,7 @@ import { UserCircle } from "./UserCircle";
 
 
 export default function TrolleyMap(){
-    const initialLatDelta = .0372;
+    const initialLatDelta = .0305;
     const initialLongDelta = initialLatDelta;
     const [currentLatDelta, setCurrentLatDelta] = useState(initialLatDelta);
 
@@ -61,21 +61,23 @@ export default function TrolleyMap(){
       ]
 
     return (
-      <MapView 
-      style={styles.map}
-      customMapStyle={mapStyles}
-      onRegionChange={onRegionChange}
-      provider={PROVIDER_GOOGLE}
-      initialRegion={{
-          latitude:32.7834,
-          longitude: -96.7984,
-          latitudeDelta:initialLatDelta,
-          longitudeDelta:initialLongDelta
-        }} >
-        <UserCircle latDelta={currentLatDelta}  />
-        <TrolleyPath />
-        <TrolleyCars />
-      </MapView>
+      <>
+        <MapView 
+          style={styles.map}
+          customMapStyle={mapStyles}
+          onRegionChange={onRegionChange}
+          provider={PROVIDER_GOOGLE}
+          initialRegion={{
+              latitude:32.7934,
+              longitude: -96.7984,
+              latitudeDelta:initialLatDelta,
+              longitudeDelta:initialLongDelta
+            }} >
+          <UserCircle latDelta={currentLatDelta}  />
+          <TrolleyPath />
+          <TrolleyCars />
+        </MapView>
+      </>
     );
 }
 

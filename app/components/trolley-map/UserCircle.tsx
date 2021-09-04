@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Circle, Region } from "react-native-maps";
 import { Dimensions } from "react-native";
-import { UserLocation, WatchUserLocation } from "services";
+import { UserLocation, WatchUserLocation } from "../../services/UserLocationService";
 
 
 

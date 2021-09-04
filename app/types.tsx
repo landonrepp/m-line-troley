@@ -13,12 +13,12 @@ export type BottomTabParamList = {
   TabTwo: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type TrackerPageParamList = {
+  TrackerPage: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type EventsPageParamList = {
+  EventsPage: undefined;
 };
 
 export type DrawerParamList = {
