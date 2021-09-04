@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet } from 'react-native';
-import MapView from 'react-native-maps';
-import { Text, View } from '../components/Themed';
-import TrolleyMap from '../components/trolley-map/TrolleyMap';
+import { StyleSheet, View, Text } from 'react-native';
 
-export default function TabOneScreen() {
+export default function EventScreen() {
   return (
-    <TrolleyMap />
+    <View style={styles.container}>
+      <Text style={styles.title}>Tab Two</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    </View>
   );
 }
 

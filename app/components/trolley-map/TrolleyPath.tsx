@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageURISource } from 'react-native';
 import { Marker, LatLng, Polyline } from 'react-native-maps';
-import { MLineStops, MLineTurnPoints } from 'services';
+import { MLineStops, MLineTurnPoints } from "../../services/index";
 import { UserCircle } from './UserCircle'
 
 export function TrolleyPath() {
