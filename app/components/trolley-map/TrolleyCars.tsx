@@ -3,26 +3,16 @@ import { useEffect, useState } from "react";
 import { ImageURISource, View, Image } from "react-native";
 import { LatLng, Marker } from "react-native-maps";
 import { GetTrolleyStatus, TrolleyStatus } from "../../services/index";
+import { WatchTrolleyStatus } from "../../services/TrolleyStatusService";
 
 export function TrolleyCars(){
     const [trolleyStatus, setTrolleyStatus] = useState<TrolleyStatus|null>(null);
-    const setTrolleyStatusAsync = () =>{
-        GetTrolleyStatus()
-            .then(result=>{
-                if(!result)
-                    return;
-                    
-                setTrolleyStatus(result!);
-            });
-    }
     useEffect(() => {
-        setTrolleyStatusAsync();
-        const intervalId = setInterval(()=>{
-            setTrolleyStatusAsync();
-        }, 5000);
-        return () => {
-            clearInterval(intervalId);
-        }
+        const removeWatch = WatchTrolleyStatus((status: TrolleyStatus)=>{
+            setTrolleyStatus(status);
+        })
+
+        return removeWatch
     }, []);
     return (
         <>
