@@ -3,6 +3,8 @@ import { CurrentDate } from "./DateService";
 export function GetIsTrolleyAvailable(): boolean {
 	const day = CurrentDate();
 	const dayOfWeek = day.getDay() as DaysOfTheWeek;
+	// +23 %24 maps everything normally, except midnight, 
+  // which will not be considered the last hour of the day
 	const hourOfDay = (day.getHours() + 23) % 24;
 	const availabilityForDay = GetTrolleyAvailability()
 		.filter((x) => x.day == dayOfWeek)
