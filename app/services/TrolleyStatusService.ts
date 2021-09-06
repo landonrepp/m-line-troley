@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { ImageURISource } from "react-native";
 import { LatitudeAndLongitude } from "./LatitudeAndLongitude";
 import { ConfigValues } from "../services/Configurations";
+import {parse as ParseHtml} from 'fast-html-parser';
 
 export type TrolleyCarStatus = {
 	coords: LatitudeAndLongitude;
@@ -65,13 +66,16 @@ function GetTrolleyStatus() {
 				);
 
 			return {
-				bannerContent: data["32768"],
+				bannerContent: ParseHeaderHtml(data["32768"]),
 				trollies: trollies,
 				timeReceived: new Date(),
 			} as TrolleyStatus;
 		});
 }
 
+function ParseHeaderHtml(rawHtml:string){
+	return ParseHtml(rawHtml).text;
+}
 
 function CreateTrolleyWatch(){
     const watchTrolleySubscriptions:((latLng:TrolleyStatus)=>void)[] = [];
@@ -92,8 +96,8 @@ function CreateTrolleyWatch(){
         if(watchTrolleySubscriptions.length > 0){
             setLocalStatus();
         }
-    }, 2500)
-    return function WatchTrolleyStatus(x:(latLng:TrolleyStatus)=>void) : ()=>void{
+    }, 5000)
+    return function WatchTrolleyStatus(x:(status:TrolleyStatus)=>void) : ()=>void{
         watchTrolleySubscriptions.push(x);
 
         if(lastTrolleyStatus != null){
