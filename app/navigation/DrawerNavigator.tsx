@@ -13,6 +13,7 @@ import {
   GetTrolleyAvailability,
 } from "../services/TrolleyAvailabilityService";
 import { TrolleyNotAvailableScreen } from "../screens/TrolleyNotAvailableScreen";
+import { useEffect, useState } from "react";
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
 export default function DrawerNavigator() {
@@ -29,6 +30,15 @@ export default function DrawerNavigator() {
 const TrackerStack = createStackNavigator<TrackerPageParamList>();
 
 function TrackerPage() {
+  const [available, setAvailable] = useState<boolean>(GetIsTrolleyAvailable());
+  useEffect(() => {
+    var intervalId = setInterval(() => {
+      setAvailable(GetIsTrolleyAvailable());
+    }, 10000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   return GetIsTrolleyAvailable() ? (
     <TrackerStack.Navigator screenOptions={{ headerShown: false }}>
       <TrackerStack.Screen name="TrackerPage" component={TrolleyMapScreen} />
