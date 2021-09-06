@@ -74,7 +74,7 @@ function GetTrolleyStatus() {
 }
 
 function ParseHeaderHtml(rawHtml:string){
-	return ParseHtml(rawHtml).text;
+	return ParseHtml(rawHtml).rawText;
 }
 
 function CreateTrolleyWatch(){
