@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   },
   header: {
     alignSelf: "flex-start",
+    width:"100%"
   },
   map: {
     flex: 1,
