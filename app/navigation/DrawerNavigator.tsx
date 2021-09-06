@@ -30,25 +30,9 @@ export default function DrawerNavigator() {
 const TrackerStack = createStackNavigator<TrackerPageParamList>();
 
 function TrackerPage() {
-  const [available, setAvailable] = useState<boolean>(GetIsTrolleyAvailable());
-  useEffect(() => {
-    var intervalId = setInterval(() => {
-      setAvailable(GetIsTrolleyAvailable());
-    }, 10000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-  return GetIsTrolleyAvailable() ? (
+  return (
     <TrackerStack.Navigator screenOptions={{ headerShown: false }}>
       <TrackerStack.Screen name="TrackerPage" component={TrolleyMapScreen} />
-    </TrackerStack.Navigator>
-  ) : (
-    <TrackerStack.Navigator screenOptions={{ headerShown: false }}>
-      <TrackerStack.Screen
-        name="TrackerPage"
-        component={TrolleyNotAvailableScreen}
-      />
     </TrackerStack.Navigator>
   );
 }
