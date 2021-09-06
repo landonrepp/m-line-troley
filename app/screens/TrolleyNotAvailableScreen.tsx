@@ -1,11 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 
 export function TrolleyNotAvailableScreen() {
     return (
-        <View>
-            <Text>Trolley out of service</Text>
-        </View>
+        <Text>Trolley out of service</Text>
     )
 }
+
+const styles = StyleSheet.create({
+    notAvailableWarning: {
+        backgroundColor: "#f00",
+        color: "#fff"
+    }
+})
