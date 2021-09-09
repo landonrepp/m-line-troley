@@ -21,7 +21,12 @@ export type EventsPageParamList = {
   EventsPage: undefined;
 };
 
+export type SchedulePageParamList = {
+  SchedulePage: undefined;
+};
+
 export type DrawerParamList = {
   Tracker: undefined;
   Events: undefined;
+  Schedule: undefined;
 };
