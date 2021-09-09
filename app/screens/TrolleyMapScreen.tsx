@@ -11,6 +11,7 @@ import { TrolleyNotAvailableScreen } from "./TrolleyNotAvailableScreen";
 export default function TrolleyMapScreen() {
   const [isAvailable, setIsAvailable] = React.useState<boolean>(true);
   useEffect(() => {
+    setIsAvailable(GetIsTrolleyAvailable());
     const intervalId = setInterval(()=>{
       setIsAvailable(GetIsTrolleyAvailable());
     }, 5000);
