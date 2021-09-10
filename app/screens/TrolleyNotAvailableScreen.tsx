@@ -9,14 +9,12 @@ export function TrolleyNotAvailableScreen() {
     const navigationRef = useNavigation<NavigationProp<DrawerParamList>>();
     
     return (
-        <>
-            <View style={styles.container}>
-                <Text style={styles.notAvailableWarning}>Trolley out of service</Text>
-                <TouchableOpacity style={styles.button} onPress={()=>navigationRef.navigate("Schedule")} >
-                    <Text style={[styles.notAvailableWarning]}>See Schedule</Text>
-                </TouchableOpacity>
-            </View>
-        </>
+        <View style={styles.container}>
+            <Text style={styles.notAvailableWarning}>Trolley out of service</Text>
+            <TouchableOpacity style={styles.button} onPress={()=>navigationRef.navigate("Schedule")} >
+                <Text style={[styles.notAvailableWarning]}>See Schedule</Text>
+            </TouchableOpacity>
+        </View>
     )
 }
 

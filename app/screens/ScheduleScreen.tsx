@@ -7,7 +7,7 @@ export function ScheduleScreen() {
     <>
       <Text style={styles.header}>Trolley Schedule</Text>
       {GetTrolleyAvailability().map((x) => (
-        <Text style={styles.lineItem}>
+        <Text key={x.day} style={styles.lineItem}>
           {x.nameOfDay}: {x.startTime} - {x.endTime}
         </Text>
       ))}
