@@ -1,0 +1,29 @@
+name: Expo Publish
+on:
+  push:
+    branches:
+      - main
+      - feat/*
+jobs:
+  publish:
+    name: Install and publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - uses: microsoft/variable-substitution@v1 
+        with:
+          files: 'app/app.json
+        env:
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: 4.x
+          token: ${{ secrets.EXPO_TOKEN }}
+      - run cd app
+      - run: npm i
+      - run: npm i -g expo-cli
+      - run npm run test
+      - run: expo publish
