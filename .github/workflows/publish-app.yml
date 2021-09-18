@@ -17,7 +17,7 @@ jobs:
         with:
           files: 'app/app.json'
         env:
-          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - uses: expo/expo-github-action@v6
         with:
           expo-version: 4.x
