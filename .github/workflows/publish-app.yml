@@ -15,7 +15,7 @@ jobs:
           node-version: 14.x
       - uses: microsoft/variable-substitution@v1 
         with:
-          files: 'app/app.json'
+          files: './app/app.json'
         env:
           GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - uses: expo/expo-github-action@v6
