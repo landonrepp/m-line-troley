@@ -8,6 +8,9 @@ jobs:
   publish:
     name: Install and publish
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -19,8 +22,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: replace google map api key
         run: find app/app.json -type f -exec sed -i ''s/GOOGLE_MAPS_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g'' {} \;
-      - run: cd app
       - run: npm i
       - run: npm i -g expo-cli
       - run: npm run test
-      - run: expo publish
+      - run: npm run publish
