@@ -22,7 +22,7 @@ jobs:
         with:
           expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
-      - run cd app
+      - run: cd app
       - run: npm i
       - run: npm i -g expo-cli
       - run: npm run test
