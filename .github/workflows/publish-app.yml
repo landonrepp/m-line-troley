@@ -18,7 +18,7 @@ jobs:
           expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
       - name: replace google map api key
-        run: find *.json -type f -exec sed -i ''s/GOOGLE_MAPS_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g'' {} \;
+        run: find app/app.json -type f -exec sed -i ''s/GOOGLE_MAPS_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g'' {} \;
       - run: cd app
       - run: npm i
       - run: npm i -g expo-cli
