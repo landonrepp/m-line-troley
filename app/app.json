@@ -26,7 +26,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.android.mline"
+      "package": "com.android.mline",
+      "config":{
+        "googleMaps":{
+          "apiKey":"GOOGLE_MAPS_KEY"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
