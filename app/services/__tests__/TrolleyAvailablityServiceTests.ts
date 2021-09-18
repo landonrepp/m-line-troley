@@ -13,22 +13,22 @@ describe("GetIsTrolleyAvailable returns correct availability based on current ti
 		});
 	}
 
-	run(new Date("Sun Sep 05 2021 21:08:54 GMT-0500"), true);
-	run(new Date("Sun Sep 05 2021 10:08:54 GMT-0500"), true);
-	run(new Date("Sun Sep 05 2021 22:08:54 GMT-0500"), false);
-	run(new Date("Sun Sep 05 2021 23:08:54 GMT-0500"), false);
-	run(new Date("Sun Sep 05 2021 04:08:54 GMT-0500"), false);
+	run(new Date("Sun Sep 05 2021 21:08:54"), true);
+	run(new Date("Sun Sep 05 2021 10:08:54"), true);
+	run(new Date("Sun Sep 05 2021 22:08:54"), false);
+	run(new Date("Sun Sep 05 2021 23:08:54"), false);
+	run(new Date("Sun Sep 05 2021 04:08:54"), false);
 
-	run(new Date("Mon Sep 06 2021 22:08:54 GMT-0500"), false);
-	run(new Date("Mon Sep 06 2021 21:08:54 GMT-0500"), true);
-	run(new Date("Mon Sep 06 2021 04:08:54 GMT-0500"), false);
+	run(new Date("Mon Sep 06 2021 22:08:54"), false);
+	run(new Date("Mon Sep 06 2021 21:08:54"), true);
+	run(new Date("Mon Sep 06 2021 04:08:54"), false);
 
-	run(new Date("Fri Sep 03 2021 22:08:54 GMT-0500"), true);
-	run(new Date("Fri Sep 03 2021 21:08:54 GMT-0500"), true);
-	run(new Date("Fri Sep 03 2021 01:08:54 GMT-0500"), false);
+	run(new Date("Fri Sep 03 2021 22:08:54"), true);
+	run(new Date("Fri Sep 03 2021 21:08:54"), true);
+	run(new Date("Fri Sep 03 2021 01:08:54"), false);
 
-	run(new Date("Fri Sep 03 2021 00:08:54 GMT-0500"), false);
-	run(new Date("Fri Sep 03 2021 23:08:54 GMT-0500"), true);
-	run(new Date("Fri Sep 03 2021 23:59:54 GMT-0500"), true);
-	run(new Date("Fri Sep 03 2021 04:08:54 GMT-0500"), false);
+	run(new Date("Fri Sep 03 2021 00:08:54"), false);
+	run(new Date("Fri Sep 03 2021 23:08:54"), true);
+	run(new Date("Fri Sep 03 2021 23:59:54"), true);
+	run(new Date("Fri Sep 03 2021 04:08:54"), false);
 });
