@@ -29,7 +29,7 @@
       "package": "com.android.mline",
       "config":{
         "googleMaps":{
-          "apiKey":"GOOGLE_MAPS_KEY"
+          "apiKey":""
         }
       }
     },
