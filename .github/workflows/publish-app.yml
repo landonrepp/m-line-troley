@@ -13,15 +13,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - uses: microsoft/variable-substitution@v1 
-        with:
-          files: 'app/app.json'
-        env:
-          expo.android.config.apiKey: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - uses: expo/expo-github-action@v6
         with:
           expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
+      - name: replace google map api key
+        run: find *.json -type f -exec sed -i ''s/GOOGLE_MAPS_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g'' {} \;
       - run: cd app
       - run: npm i
       - run: npm i -g expo-cli
