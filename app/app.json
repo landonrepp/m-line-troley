@@ -2,7 +2,7 @@
   "expo": {
     "name": "MLine",
     "slug": "MLine",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "app",
@@ -22,11 +22,15 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.android.mline",
+      "package": "com.mata.mline",
+      "permissions":[
+        "LOCATION"
+      ],
       "config":{
         "googleMaps":{
           "apiKey":"GOOGLE_MAPS_KEY"
