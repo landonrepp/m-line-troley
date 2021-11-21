@@ -8,7 +8,12 @@
     "eject": "expo eject",
     "test:watch": "jest --watchAll",
     "test":"jest",
-    "publish":"expo publish"
+    "build:android":"expo build:android --release-channel dev",
+    "build:android:staging":"expo build:android --release-channel staging",
+    "build:android:prod":"expo build:android --release-channel prod",
+    "publish":"expo publish --release-channel dev",
+    "publish:staging":"expo publish --release-channel staging",
+    "publish:prod":"expo publish --release-channel prod"
   },
   "jest": {
     "preset": "jest-expo"
