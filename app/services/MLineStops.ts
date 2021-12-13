@@ -3,187 +3,155 @@ import { LatitudeAndLongitude } from "./LatitudeAndLongitude"
 // a list of stops where the MLine picks up and drops off passengers. used to display stops on the tracker
 export const MLineStops: LatitudeAndLongitude[] = [
     {
-        latitude: 32.807081,
-        longitude:-96.795907,
-    },
-    // { i need to ask why this stop is commented out in the reference code
-    //     lat: 32.805985,
-    //     long:-96.794786,
-    // },
-    {
-        latitude: 32.805563,
-        longitude:-96.794098,
+        longitude: -96.79410564416,
+        latitude: 32.80555966576
     },
     {
-        latitude: 32.807625,
-        longitude:-96.79652,
+        longitude: -96.79616376892,
+        latitude: 32.80732958393
     },
     {
-        latitude: 32.808372,
-        longitude:-96.798183,
+        longitude: -96.7966524,
+        latitude: 32.807744
     },
     {
-        latitude: 32.807318,
-        longitude:-96.799503,
+        longitude: -96.7960768,
+        latitude: 32.8085351
     },
     {
-        latitude: 32.806827,
-        longitude:-96.799558,
+        longitude: -96.7965101,
+        latitude: 32.8092046
     },
     {
-        latitude: 32.809314,
-        longitude:-96.796641,
+        longitude: -96.7982919,
+        latitude: 32.808349
     },
     {
-        latitude: 32.808573,
-        longitude:-96.795981,
+        longitude: -96.7994380749,
+        latitude: 32.80655745164
     },
     {
-        latitude: 32.805214,
-        longitude:-96.800322,
+        longitude: -96.8002596,
+        latitude: 32.8052061
     },
     {
-        latitude: 32.803658,
-        longitude:-96.801347,
+        longitude: -96.8013049,
+        latitude: 32.8036102
     },
     {
-        latitude: 32.802114,
-        longitude:-96.802347,
+        longitude: -96.8023412,
+        latitude: 32.8020265
     },
     {
-        latitude: 32.798572,
-        longitude:-96.801253,
+        longitude: -96.8009226,
+        latitude: 32.7996113
     },
     {
-        latitude: 32.798294,
-        longitude:-96.801143,
+        longitude: -96.80138254049,
+        latitude: 32.79775684561
     },
     {
-        latitude: 32.797759,
-        longitude:-96.801438,
+        longitude: -96.8017137,
+        latitude: 32.796545
     },
     {
-        latitude: 32.797526,
-        longitude:-96.801336,
+        longitude: -96.8024498,
+        latitude: 32.7941761
     },
     {
-        latitude: 32.796592,
-        longitude:-96.801775,
+        longitude: -96.8028118,
+        latitude: 32.7931065
     },
     {
-        latitude: 32.79608,
-        longitude:-96.801732,
+        longitude: -96.80324815281,
+        latitude: 32.79179153718
     },
     {
-        latitude: 32.79531,
-        longitude:-96.80215700000001,
+        longitude: -96.80358208783,
+        latitude: 32.79090258436
     },
     {
-        latitude: 32.794988,
-        longitude:-96.80208,
+        longitude: -96.8037426,
+        latitude: 32.7890534
     },
     {
-        latitude: 32.793783,
-        longitude:-96.802496,
+        longitude: -96.8023548,
+        latitude: 32.7878996
     },
     {
-        latitude: 32.79265,
-        longitude:-96.802902,
+        longitude: -96.8006637,
+        latitude: 32.7864781
     },
     {
-        latitude: 32.791818,
-        longitude:-96.803331,
+        longitude: -96.7998385,
+        latitude: 32.7857463
     },
     {
-        latitude: 32.790949,
-        longitude:-96.803616,
+        longitude: -96.7984585,
+        latitude: 32.7845559
     },
     {
-        latitude: 32.788714,
-        longitude:-96.803342,
+        longitude: -96.7971551,
+        latitude: 32.7850242
     },
     {
-        latitude: 32.787816,
-        longitude:-96.802329,
-    },
-    // { I need to ask why this stop is commented out in the reference code
-    //     lat: 32.787233,
-    //     long:-96.801625,
-    // },
-    {
-        latitude: 32.786228,
-        longitude:-96.800439,
+        longitude: -96.7962893,
+        latitude: 32.7857894
     },
     {
-        latitude: 32.784585,
-        longitude:-96.79854,
+        longitude: -96.79718624602,
+        latitude: 32.78667448916
     },
     {
-        latitude: 32.784873,
-        longitude:-96.797209,
+        longitude: -96.79863810606,
+        latitude: 32.78783148557
     },
     {
-        latitude: 32.785722,
-        longitude:-96.796267,
+        longitude: -96.8000266,
+        latitude: 32.7886044
     },
     {
-        latitude: 32.786688,
-        longitude:-96.797253,
+        longitude: -96.8012943,
+        latitude: 32.7896539
     },
     {
-        latitude: 32.787539,
-        longitude:-96.798288,
+        longitude: -96.8029025,
+        latitude: 32.7911497
     },
     {
-        latitude: 32.788152,
-        longitude:-96.799342,
+        longitude: -96.80321797863,
+        latitude: 32.79177180839
     },
     {
-        latitude: 32.788978,
-        longitude:-96.800558,
+        longitude: -96.8029083,
+        latitude: 32.7926984
     },
     {
-        latitude: 32.789661,
-        longitude:-96.80138,
+        longitude: -96.8025591,
+        latitude: 32.79377
     },
     {
-        latitude: 32.790867,
-        longitude:-96.802679,
+        longitude: -96.8017843,
+        latitude: 32.7961842
     },
     {
-        latitude: 32.793216,
-        longitude:-96.802848,
+        longitude: -96.8011943,
+        latitude: 32.7983123
     },
     {
-        latitude: 32.794203,
-        longitude:-96.802517,
+        longitude: -96.8009095,
+        latitude: 32.7995402
     },
     {
-        latitude: 32.799602,
-        longitude:-96.801013,
+        longitude: -96.8002826,
+        latitude: 32.8028615
     },
     {
-        latitude: 32.799533,
-        longitude:-96.800831,
+        longitude: -96.7997819,
+        latitude: 32.8035973
     },
     {
-        latitude: 32.801867,
-        longitude:-96.800884,
-    },
-    {
-        latitude: 32.802856,
-        longitude:-96.800232,
-    },
-    {
-        latitude: 32.803633,
-        longitude:-96.799703,
-    },
-    {
-        latitude: 32.805589,
-        longitude:-96.798486,
-    },
-    {
-        latitude: 32.80668,
-        longitude:-96.797764,
+        longitude: -96.798459,
+        latitude: 32.8056749
     }
 ]

@@ -7,13 +7,13 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test:watch": "jest --watchAll",
-    "test":"jest",
-    "build:android":"expo build:android --release-channel dev",
-    "build:android:staging":"expo build:android --release-channel staging",
-    "build:android:prod":"expo build:android --release-channel prod",
-    "publish":"expo publish --release-channel dev",
-    "publish:staging":"expo publish --release-channel staging",
-    "publish:prod":"expo publish --release-channel prod"
+    "test": "jest",
+    "build:android": "expo build:android --release-channel dev",
+    "build:android:staging": "expo build:android --release-channel staging",
+    "build:android:prod": "expo build:android --release-channel prod",
+    "publish": "expo publish --release-channel dev",
+    "publish:staging": "expo publish --release-channel staging",
+    "publish:prod": "expo publish --release-channel prod"
   },
   "jest": {
     "preset": "jest-expo"
@@ -54,6 +54,7 @@
     "@types/jest": "^27.0.1",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "expo-cli": "^4.13.0",
     "jest-expo": "~41.0.0-beta.0",
     "typescript": "~4.0.0"
   },
