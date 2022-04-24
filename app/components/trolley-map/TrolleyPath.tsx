@@ -1,22 +1,25 @@
 import React from 'react'
-import { ImageURISource } from 'react-native';
+import { ImageURISource, View, Image } from 'react-native';
 import { Marker, LatLng, Polyline } from 'react-native-maps';
 import { MLineStops, MLineTurnPoints } from "../../services/index";
 import { UserCircle } from './UserCircle'
 
+const mLineMarker = require("../../assets/images/m-line-fit-sm.png") as ImageURISource;
+
 export function TrolleyPath() {
-    const mLineMarker = require("../../assets/images/m-line-fit-sm.png") as ImageURISource;
-    
     return (
         <>
             {MLineStops.map((stop, idx)=>
                 <Marker key={idx} 
                     coordinate={{
-                        latitude: stop.latitude, longitude: stop.longitude
+                        latitude: stop.latitude, 
+                        longitude: stop.longitude
+                        
                     }}
-                    image={mLineMarker}
-                    anchor={{x:.5, y:.5}}
                     >
+                        <View>
+                            <Image source={mLineMarker} style={{width: 15, height: 15}} />
+                        </View>
                 </Marker>
             )}
             <Polyline 
