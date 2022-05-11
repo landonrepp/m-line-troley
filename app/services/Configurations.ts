@@ -1,9 +1,11 @@
 import configData from "../config.json";
 
 export type Configuration = {
-    mataTrackerBaseUrl: string
+    mataTrackerBaseUrl: string,
+    altMataTrackerBaseUrl: string
 }
 
 export const ConfigValues: Configuration = {
-    mataTrackerBaseUrl: configData.mataTrackerBaseUrl
+    mataTrackerBaseUrl: configData.mataTrackerBaseUrl,
+    altMataTrackerBaseUrl: configData.altMataTrackerBaseUrl
 }

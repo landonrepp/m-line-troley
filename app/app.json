@@ -19,7 +19,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mata.mline"
     },
     "android": {
       "versionCode": 10,
@@ -28,12 +29,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.mata.mline",
-      "permissions":[
-        "LOCATION", "ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"
+      "permissions": [
+        "LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
       ],
-      "config":{
-        "googleMaps":{
-          "apiKey":"GOOGLE_MAPS_KEY"
+      "config": {
+        "googleMaps": {
+          "apiKey": "GOOGLE_MAPS_KEY"
         }
       }
     },

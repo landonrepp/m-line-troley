@@ -11,6 +11,9 @@
     "build:android": "expo build:android --release-channel dev",
     "build:android:staging": "expo build:android --release-channel staging",
     "build:android:prod": "expo build:android --release-channel prod",
+    "build:ios": "expo build:ios --release-channel dev",
+    "build:ios:staging": "expo build:ios --release-channel staging",
+    "build:ios:prod": "expo build:ios --release-channel prod",
     "publish": "expo publish --release-channel dev",
     "publish:staging": "expo publish --release-channel staging",
     "publish:prod": "expo publish --release-channel prod"

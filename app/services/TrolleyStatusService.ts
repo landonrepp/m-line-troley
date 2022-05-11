@@ -37,9 +37,9 @@ const getImageSource = (carNumber: number): ImageURISource => {
 	}
 };
 
-function GetTrolleyStatus() {
+function getTrolleyStatusByBaseUrl(baseUrl:string):Promise<TrolleyStatus | null>{
 	return axios
-		.get<any>(`${ConfigValues.mataTrackerBaseUrl}/allCars`)
+		.get<any>(`${baseUrl}/allCars`)
 		.then((result) => {
 			if (result.status != 200) {
 				return null;
@@ -70,7 +70,25 @@ function GetTrolleyStatus() {
 				trollies: trollies,
 				timeReceived: new Date(),
 			} as TrolleyStatus;
+		})
+		.catch((e) => {
+			console.warn(e);
+			return null;
 		});
+}
+
+async function GetTrolleyStatus() {
+	try{
+		let status = await getTrolleyStatusByBaseUrl(ConfigValues.mataTrackerBaseUrl);
+		if (status == null) {
+			status = await getTrolleyStatusByBaseUrl(ConfigValues.altMataTrackerBaseUrl);
+		}
+		return status;
+	}
+	catch(exception){
+		console.error(exception);
+		return null;
+	}
 }
 
 function ParseHeaderHtml(rawHtml:string){
