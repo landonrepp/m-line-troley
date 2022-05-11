@@ -40,7 +40,13 @@ const getImageSource = (carNumber: number): ImageURISource => {
 function getTrolleyStatusByBaseUrl(baseUrl:string):Promise<TrolleyStatus | null>{
 	return axios
 		.get<any>(`${baseUrl}/allCars`)
+		.catch((e) => {
+			console.log(e);
+			return null;
+		})
 		.then((result) => {
+			if(result == null)
+				return null;
 			if (result.status != 200) {
 				return null;
 			}
@@ -72,7 +78,7 @@ function getTrolleyStatusByBaseUrl(baseUrl:string):Promise<TrolleyStatus | null>
 			} as TrolleyStatus;
 		})
 		.catch((e) => {
-			console.warn(e);
+			console.log(e);
 			return null;
 		});
 }
@@ -102,7 +108,7 @@ function CreateTrolleyWatch(){
     .then(result=>{
         lastTrolleyStatus = result;
         if(result == null){
-            console.warn("trolley status is null in watch");
+            console.log("trolley status is null in watch");
             return;
         }
         watchTrolleySubscriptions.forEach(fn=>{
@@ -128,7 +134,7 @@ function CreateTrolleyWatch(){
         return ()=>{
             const index = watchTrolleySubscriptions.indexOf(x);
             if (index == -1) {
-                console.warn("unsubscribe from trolley location service may have failed")
+                console.log("unsubscribe from trolley location service may have failed")
                 return;
             }
             watchTrolleySubscriptions.splice(index, 1);
