@@ -1,3 +1,4 @@
 {
-    "mataTrackerBaseUrl": "https://track.mata.org:7170"
+    "mataTrackerBaseUrl": "http://track.mata.com/api",
+    "altMataTrackerBaseUrl": "https://track.mata.org:7170"
 }

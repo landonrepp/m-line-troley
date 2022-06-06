@@ -2,11 +2,11 @@
   "expo": {
     "name": "MLine",
     "slug": "MLine",
-    "version": "1.0.10",
+    "version": "1.0.12",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "app",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -19,21 +19,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mata.mline"
     },
     "android": {
-      "versionCode": 10,
+      "versionCode": 12,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.mata.mline",
-      "permissions":[
-        "LOCATION", "ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"
+      "permissions": [
+        "LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
       ],
-      "config":{
-        "googleMaps":{
-          "apiKey":"GOOGLE_MAPS_KEY"
+      "config": {
+        "googleMaps": {
+          "apiKey": "__API_KEY__"
         }
       }
     },
